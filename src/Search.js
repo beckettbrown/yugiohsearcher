@@ -38,7 +38,7 @@ function Search({ allCards }) {
           value={searchTerm} 
           onChange={(e) => setSearchTerm(e.target.value)} 
           placeholder="Search for a card" 
-          className="search-input" // Add a class for the input
+          className="search-input" 
         />
         <button className='filter-button' type="submit">Search</button>
       </form>

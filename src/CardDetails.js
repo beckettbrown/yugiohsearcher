@@ -1,11 +1,10 @@
-// CardDetails.js
 import React, { useState } from 'react';
 
 function CardDetails({ card, isSelected, handleSelectCard }) {
     const [isOpen, setIsOpen] = useState(false);
   
     const toggleCollapse = (event) => {
-      event.stopPropagation(); // Add this line to stop the event from bubbling up
+      event.stopPropagation(); //stop the event from bubbling up
       setIsOpen(!isOpen);
       console.log(isOpen);
     };

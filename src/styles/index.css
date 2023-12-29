@@ -1,11 +1,10 @@
 @font-face {
   font-family: 'YGO';
-  src: url('./YGOFont2.ttf') format('truetype'); /* Path to the font file */
+  src: url('./YGOFont2.ttf') format('truetype'); 
 }
 
-/* Apply the font to the entire app */
 body {
-  font-family: 'YGO', sans-serif; /* Fallback to sans-serif if CustomFont is not available */
+  font-family: 'YGO', sans-serif; 
 }
 
 body {
@@ -15,7 +14,7 @@ body {
     sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a; /* Dark background for the grid */
+  background-color: #1a1a1a; 
 }
 
 code {

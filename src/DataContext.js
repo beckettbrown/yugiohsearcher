@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-// Create the context with default values
+// Context with default values
 export const DataContext = createContext({
   isLoading: false,
   error: null,

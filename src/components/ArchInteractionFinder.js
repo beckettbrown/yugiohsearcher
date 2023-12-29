@@ -14,7 +14,6 @@ function ArchInteractionFinder({ selectedCard, allCards }) {
             return [];
         }
 
-        // Filter cards based on the archetype
         return allCards.filter(card => card.archetype === selectedCard.archetype);
     };
 

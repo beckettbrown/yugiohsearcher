@@ -55,7 +55,7 @@ function SearcherInteractionFinder({ selectedCard, allCards }) {
         `draw 1 "${selectedCard.attribute}"`,
         `add 1 "${selectedCard.attribute}"`,
 
-      // Add more phrases or keywords as needed
+      // Add more phrases or keywords above
     ];
 
     return allCards.filter(card => 

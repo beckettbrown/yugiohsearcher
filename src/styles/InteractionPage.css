@@ -1,16 +1,14 @@
 @font-face {
     font-family: 'YGO';
-    src: url('./YGOFont2.ttf') format('truetype'); /* Path to the font file */
+    src: url('./YGOFont2.ttf') format('truetype'); 
   }
   
-  /* Apply the font to the entire app */
   body {
-    font-family: 'YGO', sans-serif; /* Fallback to sans-serif if CustomFont is not available */
+    font-family: 'YGO', sans-serif; 
   }
 
-/* Style for the selected card at the top */
 .selected-card-container {
-    max-width: 300px; /* Adjust the width to be slightly larger */
+    max-width: 300px; 
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -22,17 +20,15 @@
     height: auto; 
   }
   
-  /* Styles for the grid of interaction results */
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); /* Consistent size columns */
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); 
     gap: 10px;
     padding: 10px;
     margin: auto;
     background-color: #1a1a1a;
   }
   
-  /* Adjust the number of columns based on screen width for better control */
   @media (min-width: 300px) {
     .cards-grid {
       grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
@@ -52,29 +48,28 @@
   }
 
   .card-group {
-    /* Styles for the group of cards */
   }
   
   hr {
     border: 0;
     height: 10px;
-    background-color: rgba(255, 165, 0, 0.6); /* Adjust the color as needed */
-    margin: 20px auto; /* Center the line */
-    width: 95%; /* Set width to 90% of the screen */
-    border-radius: 5px; /* Add rounded edges */
+    background-color: rgba(255, 165, 0, 0.6); 
+    margin: 20px auto; 
+    width: 95%; 
+    border-radius: 5px; 
   }
   
 
-/* New class for the selected card layout */
+
 .selected-card-layout {
   display: flex;
-  flex-direction: row; /* Layout image and details side by side */
-  align-items: center; /* Vertically align items */
+  flex-direction: row; 
+  align-items: center;
 }
 
 .selected-card-layout .card-image-container {
   flex: 1;
-  max-width: 150px; /* Adjust as needed */
+  max-width: 150px; 
   padding-right: 10px;
 }
 
@@ -82,7 +77,6 @@
   flex: 2;
 }
 
-/* Ensure this class overrides any other card-container styles */
 .selected-card-layout .card-container {
   flex-direction: column;
 }

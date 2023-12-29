@@ -6,7 +6,7 @@ function Header() {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate('/'); // Navigates to the homepage
+    navigate('/'); 
   };
 
   return (

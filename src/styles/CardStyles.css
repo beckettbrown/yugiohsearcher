@@ -17,17 +17,15 @@
   animation: pulse 2.5s infinite;
 }
 
-/* Rest of your existing CSS */
 
 
 @font-face {
   font-family: 'YGO';
-  src: url('./YGOFont2.ttf') format('truetype'); /* Path to the font file */
+  src: url('./YGOFont2.ttf') format('truetype'); 
 }
 
-/* Apply the font to the entire app */
 body {
-  font-family: 'YGO', sans-serif; /* Fallback to sans-serif if CustomFont is not available */
+  font-family: 'YGO', sans-serif; 
 }
 
 
@@ -37,7 +35,7 @@ body {
   gap: 10px;
   padding: 10px;
   margin: auto;
-  background-color: #1a1a1a; /* As previously defined */
+  background-color: #1a1a1a; 
 }
 
 @media (min-width: 300px) {
@@ -67,10 +65,10 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content */
-  justify-content: space-between; /* Distribute space evenly */
-  height: 100%; /* Ensure full height */
-  box-sizing: border-box; /* Include padding and border in height */
+  align-items: center; 
+  justify-content: space-between; 
+  height: 100%; 
+  box-sizing: border-box; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #d1d1ec;
 }
@@ -81,9 +79,9 @@ body {
 }
 
 .card-image {
-  width: 100%; /* Full width of the container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area without stretching */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
 .card-details {
@@ -91,7 +89,7 @@ body {
 }
 
 .collapsible {
-  background-color: #3d3d5c; /* Purple background for buttons */
+  background-color: #3d3d5c; 
   color: white;
   cursor: pointer;
   padding: 5px;
@@ -104,11 +102,11 @@ body {
 }
 
 .collapsible:hover {
-  background-color: #4d4d6e; /* Slightly lighter purple on hover */
+  background-color: #4d4d6e; 
 }
 
 .active, .collapsible:hover {
-  background-color: #4d4d6e; /* Consistent hover effect for active state */
+  background-color: #4d4d6e; 
 }
 
 .content {
@@ -119,77 +117,77 @@ body {
 }
 
 .active {
-  display: block; /* Ensure content is visible when active */
+  display: block; 
 }
 .searchbox {
-  background-color: #262626; /* Dark background for cards */
-  border: 1px solid #3d3d5c; /* Blue border */
+  background-color: #262626; 
+  border: 1px solid #3d3d5c; 
   padding: 10px;
   cursor: text;
   display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  color: #d1d1ec; /* Light text color for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  color: #d1d1ec; 
 }
 
 .searchbutton {
-  background-color: #262626; /* Dark background for cards */
-  border: 1px solid #3d3d5c; /* Blue border */
+  background-color: #262626; 
+  border: 1px solid #3d3d5c; 
   padding: 10px;
   cursor: pointer;
   display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  color: #d1d1ec; /* Light text color for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  color: #d1d1ec; 
 }
 
 .searcherbutton {
-  background-color: rgba(255, 165, 0, 0.6); /* Dark background for cards */
-  border: 1px solid #3d3d5c; /* Blue border */
+  background-color: rgba(255, 165, 0, 0.6); 
+  border: 1px solid #3d3d5c; 
   padding: 10px;
   cursor: pointer;
   display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  color: #d1d1ec; /* Light text color for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  color: #d1d1ec; 
 }
 
 .banner {
-  background-color: #262626; /* Dark background for cards */
+  background-color: #262626; 
   text-align: center;
   margin: auto;
   width: 50%;
-  border: 3px solid #3d3d5c; /* Blue border */
+  border: 3px solid #3d3d5c; 
   padding: 10px;
   cursor: pointer;
   display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  color: #d1d1ec; /* Light text color for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  color: #d1d1ec; 
 }
 
 .card-container.selected {
   transform: scale(1.02);
   box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
-  flex-direction: column; /* Stack elements horizontally for the selected card */
-  align-items: center; /* Align items vertically center */
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .ygo-button {
-  background-color: rgba(255, 165, 0, 0.6); /* Dark background for cards */
+  background-color: rgba(255, 165, 0, 0.6); 
   text-align: center;
   margin: auto;
   width: 50%;
-  border: 3px solid #3d3d5c; /* Blue border */
+  border: 3px solid #3d3d5c; 
   padding: 10px;
   cursor: pointer;
   display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  color: black; /* Light text color for readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  color: black; 
 }
 
 .ygo-button:hover {
-  filter: brightness(1.1); /* Slightly brighter on hover */
+  filter: brightness(1.1); 
 }
 
 .ygo-button:active {
-  transform: scale(0.95); /* Slight press effect */
+  transform: scale(0.95); 
 }
 
 .NoResults {
@@ -211,52 +209,49 @@ body {
 
 }
 
-/* Container for the filter buttons */
 .filter-button-container {
   display: flex;
-  justify-content: center; /* Center buttons horizontally */
-  margin-bottom: 10px; /* Spacing below the button container */
+  justify-content: center; 
+  margin-bottom: 10px; 
 }
 
-/* Style for each filter button */
 .filter-button {
-  background-color: #262626; /* Dark background */
-  border: 1px solid #3d3d5c; /* Border color */
-  color: white; /* Text color */
-  padding: 10px 20px; /* Padding inside buttons */
-  margin: 0 5px; /* Spacing between buttons */
-  cursor: pointer; /* Cursor to indicate clickable */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background-color: #262626; 
+  border: 1px solid #3d3d5c; 
+  color: white; 
+  padding: 10px 20px; 
+  margin: 0 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
 }
 
-/* Style for the active filter button */
 .filter-button.active {
-  background-color: rgba(255, 165, 0, 0.6); /* Orange background for active button */
-  color: black; /* Text color for contrast */
+  background-color: rgba(255, 165, 0, 0.6); 
+  color: black; 
 }
 
 .search-input {
-  background-color: #777676; /* Dark background */
-  border: 1px solid #3d3d5c; /* Border color */
-  color: white; /* Text color */
+  background-color: #777676; 
+  border: 1px solid #3d3d5c; 
+  color: white; 
   padding: 10px;
-  margin-right: 5px; /* Spacing between input and button */
-  outline: none; /* Remove default focus outline */
+  margin-right: 5px; 
+  outline: none; 
 }
 
-/* Style adjustments for better alignment with buttons */
+
 .search-input:focus {
-  border-color: rgba(255, 165, 0, 0.6); /* Orange border on focus */
+  border-color: rgba(255, 165, 0, 0.6); 
 }
 
 .button-center-container {
   display: flex;
-  justify-content: center; /* Center button horizontally */
-  margin-top: 10px; /* Optional spacing */
+  justify-content: center; 
+  margin-top: 10px; 
 }
 
 .filter-button.active {
-  background-color: rgba(255, 165, 0, 0.6); /* Orange background */
-  color: black; /* Text color for contrast */
-  border-color: rgba(255, 165, 0, 0.8); /* Slightly darker border for visibility */
+  background-color: rgba(255, 165, 0, 0.6); 
+  color: black; 
+  border-color: rgba(255, 165, 0, 0.8); 
 }

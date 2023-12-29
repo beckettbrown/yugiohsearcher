@@ -4,7 +4,7 @@ import '../styles/CardStyles.css';
 
 function RaceInteractionFinder({ selectedCard, allCards }) {
     const [isCollapsed, setIsCollapsed] = useState(true);
-    const [filterType, setFilterType] = useState('race'); // 'race', 'attribute', or 'type'
+    const [filterType, setFilterType] = useState('race'); 
 
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
@@ -15,7 +15,6 @@ function RaceInteractionFinder({ selectedCard, allCards }) {
             return [];
         }
 
-        // Filter cards based on the selected filter type
         switch (filterType) {
             case 'race':
                 return allCards.filter(card => selectedCard.race && card.race === selectedCard.race);
