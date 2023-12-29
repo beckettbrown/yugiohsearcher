@@ -27,7 +27,7 @@ function HomePage() {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${process.env.PUBLIC_URL}/CardDB.json`);
+        const response = await axios.get(`yugiohsearcher/CardDB.json`);
         ;
         const shuffledCards = shuffleArray([...response.data.data]); 
         setCards(shuffledCards.slice(0, 10)); 
