@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './Homepage';
+import Search from './Search';
+import InteractionPage from './InteractionPage'; // Import the new InteractionPage component
+import axios from 'axios';
 
 function App() {
+  const [allCards, setAllCards] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/CardDB.json');
+        setAllCards(response.data.data || []);
+      } catch (err) {
+        console.error("Error fetching card data:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<Search allCards={allCards} />} />
+        <Route path="/interaction" element={<InteractionPage allCards={allCards} />} />
+      </Routes>
+    </Router>
   );
 }
 

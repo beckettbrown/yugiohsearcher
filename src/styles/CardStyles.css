@@ -1,0 +1,262 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
+  }
+}
+
+.card-container.selected, .filter-button.active {
+  animation: pulse 2.5s infinite;
+}
+
+/* Rest of your existing CSS */
+
+
+@font-face {
+  font-family: 'YGO';
+  src: url('./YGOFont2.ttf') format('truetype'); /* Path to the font file */
+}
+
+/* Apply the font to the entire app */
+body {
+  font-family: 'YGO', sans-serif; /* Fallback to sans-serif if CustomFont is not available */
+}
+
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  margin: auto;
+  background-color: #1a1a1a; /* As previously defined */
+}
+
+@media (min-width: 300px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (min-width: 450px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (min-width: 600px) {
+  .cards-grid {
+    grid-template-columns: repeat(10, 1fr); /* 4 columns on larger screens */
+  }
+}
+
+
+
+.card-container {
+  background-color: #262626;
+  border: 1px solid #3d3d5c;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+  justify-content: space-between; /* Distribute space evenly */
+  height: 100%; /* Ensure full height */
+  box-sizing: border-box; /* Include padding and border in height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #d1d1ec;
+}
+
+.card-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
+}
+
+.card-image {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without stretching */
+}
+
+.card-details {
+  width: 100%;
+}
+
+.collapsible {
+  background-color: #3d3d5c; /* Purple background for buttons */
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.collapsible:hover {
+  background-color: #4d4d6e; /* Slightly lighter purple on hover */
+}
+
+.active, .collapsible:hover {
+  background-color: #4d4d6e; /* Consistent hover effect for active state */
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+
+  overflow: hidden;
+}
+
+.active {
+  display: block; /* Ensure content is visible when active */
+}
+.searchbox {
+  background-color: #262626; /* Dark background for cards */
+  border: 1px solid #3d3d5c; /* Blue border */
+  padding: 10px;
+  cursor: text;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  color: #d1d1ec; /* Light text color for readability */
+}
+
+.searchbutton {
+  background-color: #262626; /* Dark background for cards */
+  border: 1px solid #3d3d5c; /* Blue border */
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  color: #d1d1ec; /* Light text color for readability */
+}
+
+.searcherbutton {
+  background-color: rgba(255, 165, 0, 0.6); /* Dark background for cards */
+  border: 1px solid #3d3d5c; /* Blue border */
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  color: #d1d1ec; /* Light text color for readability */
+}
+
+.banner {
+  background-color: #262626; /* Dark background for cards */
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #3d3d5c; /* Blue border */
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  color: #d1d1ec; /* Light text color for readability */
+}
+
+.card-container.selected {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
+  flex-direction: column; /* Stack elements horizontally for the selected card */
+  align-items: center; /* Align items vertically center */
+}
+
+.ygo-button {
+  background-color: rgba(255, 165, 0, 0.6); /* Dark background for cards */
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #3d3d5c; /* Blue border */
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  color: black; /* Light text color for readability */
+}
+
+.ygo-button:hover {
+  filter: brightness(1.1); /* Slightly brighter on hover */
+}
+
+.ygo-button:active {
+  transform: scale(0.95); /* Slight press effect */
+}
+
+.NoResults {
+  color: #d1d1ec;
+  text-align: center;
+
+}
+
+.SearchHeader {
+  color: #d1d1ec;
+  text-align: center;
+
+}
+
+.SearchHeader2 {
+  color: #d1d1ec;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+/* Container for the filter buttons */
+.filter-button-container {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  margin-bottom: 10px; /* Spacing below the button container */
+}
+
+/* Style for each filter button */
+.filter-button {
+  background-color: #262626; /* Dark background */
+  border: 1px solid #3d3d5c; /* Border color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding inside buttons */
+  margin: 0 5px; /* Spacing between buttons */
+  cursor: pointer; /* Cursor to indicate clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Style for the active filter button */
+.filter-button.active {
+  background-color: rgba(255, 165, 0, 0.6); /* Orange background for active button */
+  color: black; /* Text color for contrast */
+}
+
+.search-input {
+  background-color: #777676; /* Dark background */
+  border: 1px solid #3d3d5c; /* Border color */
+  color: white; /* Text color */
+  padding: 10px;
+  margin-right: 5px; /* Spacing between input and button */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Style adjustments for better alignment with buttons */
+.search-input:focus {
+  border-color: rgba(255, 165, 0, 0.6); /* Orange border on focus */
+}
+
+.button-center-container {
+  display: flex;
+  justify-content: center; /* Center button horizontally */
+  margin-top: 10px; /* Optional spacing */
+}
+
+.filter-button.active {
+  background-color: rgba(255, 165, 0, 0.6); /* Orange background */
+  color: black; /* Text color for contrast */
+  border-color: rgba(255, 165, 0, 0.8); /* Slightly darker border for visibility */
+}
