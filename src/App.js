@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`yugiohsearcher/CardDB.json`);
+        const response = await axios.get(`${process.env.PUBLIC_URL}/CardDB.json`);
         ;
         setAllCards(response.data.data || []);
       } catch (err) {
