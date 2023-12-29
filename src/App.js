@@ -11,7 +11,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('CardDB.json');
+        const response = await axios.get(`${process.env.PUBLIC_URL}/CardDB.json`);
+        ;
         setAllCards(response.data.data || []);
       } catch (err) {
         console.error("Error fetching card data:", err);
