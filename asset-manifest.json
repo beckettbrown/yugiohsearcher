@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yugiohsearcher/static/css/main.31c62f3a.css",
-    "main.js": "/yugiohsearcher/static/js/main.17d6d72b.js",
+    "main.js": "/yugiohsearcher/static/js/main.636c454e.js",
     "static/media/YGOFont2.ttf": "/yugiohsearcher/static/media/YGOFont2.4883095ac99690ffa433.ttf",
     "index.html": "/yugiohsearcher/index.html",
     "main.31c62f3a.css.map": "/yugiohsearcher/static/css/main.31c62f3a.css.map",
-    "main.17d6d72b.js.map": "/yugiohsearcher/static/js/main.17d6d72b.js.map"
+    "main.636c454e.js.map": "/yugiohsearcher/static/js/main.636c454e.js.map"
   },
   "entrypoints": [
     "static/css/main.31c62f3a.css",
-    "static/js/main.17d6d72b.js"
+    "static/js/main.636c454e.js"
   ]
 }
