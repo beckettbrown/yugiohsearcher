@@ -10,8 +10,10 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log('Public URL:', process.env.PUBLIC_URL);
+
       try {
-        const response = await axios.get(`${process.env.PUBLIC_URL}/CardDB.json`);
+        const response = await axios.get('CardDB.json');
         ;
         setAllCards(response.data.data || []);
       } catch (err) {
