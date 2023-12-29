@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './Homepage';
 import Search from './Search';
-import InteractionPage from './InteractionPage'; // Import the new InteractionPage component
+import InteractionPage from './InteractionPage';
 import axios from 'axios';
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Homepage" element={<Navigate replace to="/" />} />
         <Route path="/search" element={<Search allCards={allCards} />} />
         <Route path="/interaction" element={<InteractionPage allCards={allCards} />} />
       </Routes>
